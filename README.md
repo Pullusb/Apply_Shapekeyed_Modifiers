@@ -1,7 +1,10 @@
 # Apply Shapekeyed modifier
 
-Apply Selected modifiers even if there is shapekey on the mesh
-
+Apply Selected modifiers even if there is shapekey on the mesh  
+  
+**[Download latest](https://raw.githubusercontent.com/Pullusb/Apply_Shapekeyed_Modifiers/master/applyShapekeyedModifier.py)** (right click, save Target as)  
+  
+---
 > /!\ experimental : some modifiers will alter the geometry.
 Currently working for applying mirror and subsurf modifier (tested succesfully).
 Other modifier may cause changes in geometry at the apply. (simple deform for exemple give bad results !).
