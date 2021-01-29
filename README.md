@@ -7,7 +7,7 @@ Apply Selected modifiers even if there is shapekey on the mesh
 ---
 > /!\ experimental : some modifiers will alter the geometry.
 Currently working for applying mirror and subsurf modifier (tested succesfully).
-Other modifier may cause changes in geometry at the apply. (simple deform for exemple give bad results !).
+Other modifier may cause changes in geometry at the apply. (simple deform for example give bad results !).
 
 The apply menu is available in the submenu “special” of the shapekey pannel.
 
