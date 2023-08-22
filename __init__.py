@@ -1,9 +1,11 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 bl_info = {
     "name": "Apply shapekeyed modifier",
     "description": "Select modifier to apply on object with shapekeys",
     "author": "Samuel Bernou, Christophe Seux, Manuel Rais",
-    "version": (1, 0, 0),
-    "blender": (2, 77, 0),
+    "version": (1, 0, 1),
+    "blender": (2, 8, 0),
     "location": "properties > mesh > shapekey > submenu",
     "warning": "",
     "wiki_url": "",
@@ -250,11 +252,13 @@ def ApplyShapeKeyedModPanel(self,context):
 
 def register():
     bpy.utils.register_module(__name__)
-    bpy.types.MESH_MT_shape_key_specials.append(ApplyShapeKeyedModPanel)
+    bpy.types.MESH_MT_shape_key_context_menu.append(ApplyShapeKeyedModPanel) # DATA_PT_shape_keys
+    # bpy.types.DATA_PT_shape_keys.append(ApplyShapeKeyedModPanel) # DATA_PT_shape_keys
 
 def unregister():
     bpy.utils.unregister_module(__name__)
-    bpy.types.MESH_MT_shape_key_specials.remove(ApplyShapeKeyedModPanel)
+    bpy.types.MESH_MT_shape_key_context_menu.remove(ApplyShapeKeyedModPanel)
+    # bpy.types.DATA_PT_shape_keys.remove(ApplyShapeKeyedModPanel)
 
 if __name__ == "__main__":
     register()
